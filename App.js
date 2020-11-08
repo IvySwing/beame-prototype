@@ -15,27 +15,27 @@ import DashboardScreen from './screens/Dashboard';
 function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
-       <LinearGradient
-          colors={['#401B4F', '#191838','transparent']}
-          style={{
-            position: 'absolute',
-            left: 0,
-            right: 0,
-            top: 0,
-            height: 230,
-          }}
-        />
-        <Image source={logo} style={styles.logo} />
-          <ScrollView>
-            <TouchableOpacity
-              onPress={() => navigation.navigate('Dashboard')}
-              >
-              <Text style={styles.text}> SIGN UP/IN </Text>
-            </TouchableOpacity>
-            <Image source={LinkedIn_Button}  style={styles.button}/>
-            <Image source={Email_Button}  style={styles.button}/>
-          </ScrollView>
-        <Text style={styles.text}>Sneek a Peek</Text>
+      <LinearGradient
+        colors={['#401B4F', '#191838', 'transparent']}
+        style={{
+          position: 'absolute',
+          left: 0,
+          right: 0,
+          top: 0,
+          height: 230,
+        }}
+      />
+      <Image source={logo} style={styles.logo} />
+      <ScrollView>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Dashboard')}
+        >
+          <Text style={styles.text}> SIGN UP/IN </Text>
+        </TouchableOpacity>
+        <Image source={LinkedIn_Button} style={styles.button} />
+        <Image source={Email_Button} style={styles.button} />
+      </ScrollView>
+      <Text style={styles.text}>Sneek a Peek</Text>
     </View>
   );
 }
@@ -47,8 +47,8 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen options={{ headerShown: false }} name="Home" component={HomeScreen} />
-        <Stack.Screen options= {{ headerShown: false }} name="Dashboard" component={DashboardScreen} />
-        <Stack.Screen options= {{ headerShown: false }} name="CIOCard" component={CIOCardScreen} />
+        <Stack.Screen options={{ headerShown: false }} name="Dashboard" component={DashboardScreen} />
+        <Stack.Screen options={{ headerShown: false }} name="CIOCard" component={CIOCardScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
